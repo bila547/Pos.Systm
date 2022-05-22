@@ -1,0 +1,62 @@
+﻿@model Sps.Pos.Mvc.ViewModel.Security.LoginViewModel
+@{
+	ViewData["Title"] = "Login";
+	Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<div class="row justify-content-center">
+
+	<div class="col-xl-10 col-lg-12 col-md-9">
+
+		<div class="card o-hidden border-0 shadow-lg my-5">
+			<div class="card-body p-0">
+				<!-- Nested Row within Card Body -->
+				<div class="row">
+					<div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+					<div class="col-lg-6">
+						<div class="p-5">
+							<div class="text-center">
+								<h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+							</div>
+							<form form asp-action="Login" asp-controller="Security" asp-antiforgery="true" id="login-form">
+								<div class="input-group mb-3">
+									<input asp-for="Email" class="form-control" placeholder="User Name" />
+								</div>
+								<div class="input-group mb-3">
+									<span asp-validation-for="Email" class="text-danger"></span>
+								</div>
+								<div class="input-group mb-3">
+									<input asp-for="UserSecret" class="form-control" oncopy="return false"
+										   onpaste="return false" autocomplete="off" placeholder="Password" />
+								</div>
+								<div class="input-group mb-3">
+									<span asp-validation-for="UserSecret" class="text-danger"></span>
+									<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<button type="submit" class="btn btn-outline-primary btn-block">
+											<i class="fas fa-key"></i> <span> Login </span>
+										</button>
+										<a asp-action="Register" asp-controller="Security" class="btn btn-block btn-outline-danger">
+											<i class="fas fa-user-plus mr-4"></i> <span> Register </span>
+										</a>
+									</div>
+								</div>
+							</form>
+							<br>
+							<p class="mb-1 text-right">
+								<a class="btn btn-outline-primary btn-block" asp-action="ForgotPassword" asp-controller="Security">Forgot Password</a>
+							</p>
+							<div class="text-center">
+								<a class="small" href="register.html">Create an Account!</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+

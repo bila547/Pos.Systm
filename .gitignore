@@ -3,3 +3,11 @@
 ################################################################################
 
 /Pos/Sps.Pos/Sps.Pos.Dto/bin
+/Pos/Sps.Pos/Sps.Pos.Dto/obj
+/Pos/Sps.Pos/Sps.Pos.DataEntities/bin
+/Pos/Sps.Pos/Sps.Pos.Api/obj
+/Pos/Sps.Pos/Sps.Pos.Api/bin/Debug/net6.0
+/Pos/Sps.Pos/Sps.Pos.Infrastructure/bin
+/Pos/Sps.Pos/Sps.Pos.Infrastructure/obj
+/Pos/Sps.Pos/Sps.Pos.Mvc/bin/Debug/net6.0
+/Pos/Sps.Pos/Sps.Pos.Mvc/obj
