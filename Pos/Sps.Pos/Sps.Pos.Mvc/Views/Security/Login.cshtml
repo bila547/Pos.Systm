@@ -1,7 +1,7 @@
 ﻿@model Sps.Pos.Mvc.ViewModel.Security.LoginViewModel
 @{
 	ViewData["Title"] = "Login";
-	Layout = "~/Views/Shared/_LoginLayout.cshtml";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="row justify-content-center">
@@ -48,9 +48,9 @@
 							<p class="mb-1 text-right">
 								<a class="btn btn-outline-primary btn-block" asp-action="ForgotPassword" asp-controller="Security">Forgot Password</a>
 							</p>
-							<div class="text-center">
+							@*<div class="text-center">
 								<a class="small" href="register.html">Create an Account!</a>
-							</div>
+							</div>*@
 						</div>
 					</div>
 				</div>

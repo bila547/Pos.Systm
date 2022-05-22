@@ -42,20 +42,20 @@
 							</div>
 							<div class="col-sm-6">
 								<div class="form-group">
-									<label asp-for="StreetAddress" class="control-label"></label><span class="text-danger">*</span>
+									<span class="text-danger">*</span>
 									<input asp-for="StreetAddress" class="form-control" placeholder="@Html.DisplayNameFor(m => m.StreetAddress)" />
 									<span asp-validation-for="StreetAddress" class="text-danger"></span>
 								</div>
 							</div>
 							<div class="col-sm-6">
 								<div class="form-group">
-									<label asp-for="WebSite" class="control-label"></label><span class="text-danger">*</span>
+									<span class="text-danger">*</span>
 									<input asp-for="WebSite" class="form-control" placeholder="@Html.DisplayNameFor(m => m.WebSite)" />
 									<span asp-validation-for="WebSite" class="text-danger"></span>
 								</div>
 							</div>
 							<div class="form-group">
-								< asp-for="DateOfBirth" class="control-label"></><span class="text-danger">*</span>
+							<span class="text-danger">*</span>
 								<div class="input-group date" id="dvDateOfBirth" data-target-input="nearest">
 									<input asp-for="DateOfBirth" type="text" class="form-control" placeholder="@Html.DisplayNameFor(m => m.DateOfBirth)" />
 									<div class="input-group-append" data-target="#dvDateOfBirth" data-toggle="datetimepicker">
@@ -74,9 +74,9 @@
 									</div>
 								</div>
 							</div>
-							<a href="login.html" class="btn btn-primary btn-user btn-block">
+							@*@*<a href="login.html" class="btn btn-primary btn-user btn-block">
 								Register Account
-							</a>
+							</a>*@
 							<hr>
 						</form>
 						<hr>
@@ -91,8 +91,9 @@
 			</div>
 		</div>
 	</div>
+</div>
 
-	@section Scripts
+@section Scripts
 	{
-	<partial name="_ValidationScriptsPartial" />
+<partial name="_ValidationScriptsPartial" />
 	}
