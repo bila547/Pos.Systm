@@ -1,9 +1,4 @@
 ﻿using Sps.Pos.Dto.Response.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sps.Pos.Dto.Response.Customer
 {
@@ -11,7 +6,9 @@ namespace Sps.Pos.Dto.Response.Customer
 	{
 		public string Id { get; set; }
 
-		public string Name { get; set; }
+		public string FirstName { get; set; }
+
+		public string LastName { get; set; }
 
 		public string StreetAddress { get; set; }
 

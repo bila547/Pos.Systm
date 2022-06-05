@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using NToastNotify;
 using Sps.Pos.Dto.Request.Security;
 using Sps.Pos.Dto.Response.Security;
 using Sps.Pos.Dto.Security;
@@ -15,8 +16,8 @@ namespace Sps.Pos.Mvc.Controllers
 	{
 		public SecurityController(
 			IApiClient apiClient,
-			//IToastNotification toastService,
-			ILogger<SecurityController> logger) : base(logger, apiClient)
+			IToastNotification toastService,
+			ILogger<SecurityController> logger) : base(logger, apiClient, toastService)
 		{
 
 		}
@@ -53,9 +54,9 @@ namespace Sps.Pos.Mvc.Controllers
 						var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme, ClaimTypes.Name, ClaimTypes.Role);
 						identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, response.Id.ToString()));
 						identity.AddClaim(new Claim("FirstName", response.FirstName ?? string.Empty));
-						identity.AddClaim(new Claim("MiddleName", response.MiddleName ?? string.Empty));
+						//identity.AddClaim(new Claim("MiddleName", response.MiddleName ?? string.Empty));
 						identity.AddClaim(new Claim("LastName", response.LastName ?? string.Empty));
-						identity.AddClaim(new Claim("FullName", response.FullName ?? string.Empty));
+						//identity.AddClaim(new Claim("FullName", response.FullName ?? string.Empty));
 						identity.AddClaim(new Claim("MobileNumber", response.MobileNumber ?? string.Empty));
 						identity.AddClaim(new Claim(ClaimTypes.Email, response.Email ?? string.Empty));
 						identity.AddClaim(new Claim(ClaimTypes.Name, response.UserName ?? string.Empty));
@@ -103,6 +104,7 @@ namespace Sps.Pos.Mvc.Controllers
 
 		[HttpGet]
 		public IActionResult Register()
+	
 		{
 			var model = new RegisterViewModel()
 			{
@@ -126,18 +128,17 @@ namespace Sps.Pos.Mvc.Controllers
 						StreetAddress = model.StreetAddress,
 						Email = model.Email,
 						FirstName = model.FirstName,
-						MiddleName = model.MiddleName,
 						LastName = model.LastName,
 						MobileNumber = model.MobileNumber,
 						DateOfBirth = model.DateOfBirth,
 					}, CancellationToken.None);
 
-					//if (response)
-					//{
-					//	_toastService.AddSuccessToastMessage("Registration was successful.");
+					if (response)
+					{
+						_toastService.AddSuccessToastMessage("Registration was successful.");
 
-					//	return View("RegistrationSuccess");
-					//}
+						return View("RegistrationSuccess");
+					}
 				}
 				catch (ApiException ex)
 				{

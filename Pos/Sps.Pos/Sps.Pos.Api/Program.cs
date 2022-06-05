@@ -63,13 +63,13 @@ namespace Sps.Pos.Api
 
 			var app = builder.Build();
 
-			//if (app.Environment.IsDevelopment())
-			//{
-			//	app.UseDeveloperExceptionPage();
+			if (app.Environment.IsDevelopment())
+			{
+				app.UseDeveloperExceptionPage();
 
-			//	SeedDatabase.Initialize(app.Services
-			//		.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider).Wait();
-			//}
+				SeedDatabase.Initialize(app.Services
+					.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider).Wait();
+			}
 
 			app.UseSwagger();
 			app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Pos.Api v1"));

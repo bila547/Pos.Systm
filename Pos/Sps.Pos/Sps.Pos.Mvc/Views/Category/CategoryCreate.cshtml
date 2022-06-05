@@ -1,0 +1,70 @@
+﻿@model Sps.Pos.Mvc.ViewModel.CategoryViewModel
+@{
+	ViewData["Title"] = "Create Category";
+}
+
+<h3> Category Create</h3>
+<br />
+<br />
+<form asp-controller="Category" asp-action="CategoryCreate" id="register-form" method="post">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<div class="card">
+		<div class="card-header">
+		</div>
+		<div class="card-body">
+			<div class="register-logo" style="text-align:left;">
+				<div class="col-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="CategoryCode" class="control-label"></label><span class="text-danger">*</span>
+						<input asp-for="CategoryCode" class="form-control" placeholder="@Html.DisplayNameFor(m => m.CategoryCode)" />
+						<span asp-validation-for="CategoryCode" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="CategoryName" class="control-label"></label><span class="text-danger">*</span>
+						<input asp-for="CategoryName" class="form-control" placeholder="@Html.DisplayNameFor(m => m.CategoryName)" />
+						<span asp-validation-for="CategoryName" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group checkbox">
+						<input asp-for="Active" class="form-check-input" />
+						<label asp-for="Active" class="control-label"></label>
+						<span asp-validation-for="Active" class="text-danger"></span>
+					</div>
+				</div>
+					<div class="col-sm-6">
+					<div class="form-group checkbox">
+						<input asp-for="DisplayOnPos" class="form-check-input" />
+						<label asp-for="DisplayOnPos" class="control-label"></label>
+						<span asp-validation-for="DisplayOnPos" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-footer">
+			<div class="row">
+				<div class="col-sm-12 text-right">
+					<a asp-action="Categories" asp-controller="Category" class="btn btn-warning text-right">
+						<i class="glyphicon glyphicon-chevron-left"></i>&nbsp;Back to List
+					</a>
+					<button type="submit" class="btn btn-success btn-flat">
+						<i class="fa fa-plus-circle"></i>&nbsp; &nbsp; Create
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+@section Scripts
+{
+<partial name="_ValidationScriptsPartial" />
+}

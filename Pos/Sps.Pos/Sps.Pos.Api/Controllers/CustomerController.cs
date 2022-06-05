@@ -38,7 +38,8 @@ namespace Sps.Pos.Api.Controllers
 								   select new CustomerResponse
 								   {
 									   Id = x.ApplicationUserId,
-									   Name = x.ApplicationUser.FullName,
+									   FirstName = x.ApplicationUser.FirstName,
+									   LastName = x.ApplicationUser.LastName,
 									   ContactNo = x.ApplicationUser.MobileNumber,
 									   EmailConfirmed = u.EmailConfirmed,
 									   IsApproved = u.IsApproved,
@@ -78,7 +79,8 @@ namespace Sps.Pos.Api.Controllers
 								   select new CustomerResponse
 								   {
 									   Id = q.c.ApplicationUserId,
-									   Name = q.u.FullName,
+									   FirstName = q.u.FirstName,
+									   LastName = q.u.LastName,
 									   ContactNo = q.u.MobileNumber,
 									   EmailConfirmed = q.u.EmailConfirmed,
 									   IsApproved = q.u.IsApproved,
@@ -182,8 +184,6 @@ namespace Sps.Pos.Api.Controllers
 			{
 				StreetAddress = request.StreetAddress,
 				WebSite = request.WebSite,	
-
-
 				ModifiedById = request.UserId,
 				ModifiedDate = DateTime.UtcNow
 			};
@@ -266,7 +266,8 @@ namespace Sps.Pos.Api.Controllers
 			return new CustomerResponse
 			{
 				Id = customer.ApplicationUserId,
-				Name = customer.ApplicationUser.FullName,
+				FirstName = customer.ApplicationUser.FirstName,
+				LastName = customer.ApplicationUser.LastName,
 				StreetAddress = customer.StreetAddress,
 				WebSite = customer.WebSite,
 				Email = customer.ApplicationUser.Email,
@@ -302,7 +303,7 @@ namespace Sps.Pos.Api.Controllers
 					Timeout = 20000
 				};
 
-				using (var message = new MailMessage(fromAddress, new MailAddress(user.Email, user.FullName))
+				using (var message = new MailMessage(fromAddress, new MailAddress(user.Email, user.LastName))
 				{
 					Subject = "Account Approval Pos-System",
 					SubjectEncoding = Encoding.UTF8,

@@ -2,7 +2,7 @@
 {
 	public class CommonStringIdRequest : RequestBase
 	{
-		public string Id { get; set; }
+		public string? Id { get; set; }
 	}
 
 	public class CommonIdRequest : RequestBase

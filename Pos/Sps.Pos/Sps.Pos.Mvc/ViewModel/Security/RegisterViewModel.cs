@@ -9,9 +9,7 @@ namespace Sps.Pos.Mvc.ViewModel.Security
 	{
 		[Required]
 		public string FirstName { get; set; }
-		
-		public string MiddleName { get; set; }
-		
+
 		[Required]
 		public string LastName { get; set; }
 
@@ -24,8 +22,6 @@ namespace Sps.Pos.Mvc.ViewModel.Security
 		[Required]
 		[Display(Name = "Date Of Birth")]
 		public DateTime? DateOfBirth { get; set; }
-
-		public IEnumerable<SelectListItem> GenderList { get; set; }
 
 		public string StreetAddress { get; set; }
 

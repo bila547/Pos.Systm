@@ -105,7 +105,6 @@ namespace Sps.Pos.Api.Controllers
 				{
 					Id = user.Id,
 					FirstName = user.FirstName,
-					MiddleName = user.MiddleName,
 					LastName = user.LastName,
 					Email = user.Email,
 					UserName = user.UserName,
@@ -668,13 +667,11 @@ namespace Sps.Pos.Api.Controllers
 				UserName = request.Email,
 				LastName = request.LastName,
 				FirstName = request.FirstName,
-				MiddleName = request.MiddleName,
 				IsApproved = false,
 				EmailConfirmed = false,
 				LockoutEnabled = true,
 				DateOfBirth = request.DateOfBirth,
 				MobileNumber = request.MobileNumber,
-
 				CreatedDate = DateTime.UtcNow,
 			};
 
@@ -692,7 +689,6 @@ namespace Sps.Pos.Api.Controllers
 							ApplicationUser = user,
 							StreetAddress = request.StreetAddress,
 							WebSite = request.WebSite,
-
 							CreatedById = user.Id,
 							CreatedDate = DateTime.UtcNow,
 						};
@@ -751,7 +747,6 @@ namespace Sps.Pos.Api.Controllers
 							  {
 								  Id = p.Id,
 								  FirstName = p.FirstName,
-								  MiddleName = p.MiddleName,
 								  LastName = p.LastName,
 								  Email = p.Email,
 								  MobileNumber = p.MobileNumber,
@@ -837,7 +832,7 @@ namespace Sps.Pos.Api.Controllers
 					Timeout = 20000
 				};
 
-				using (var message = new MailMessage(fromAddress, new MailAddress(user.Email, user.FullName))
+				using (var message = new MailMessage(fromAddress, new MailAddress(user.Email, user.LastName))
 				{
 					Subject = "Email Confirmation Pos-System",
 					SubjectEncoding = Encoding.UTF8,
@@ -884,7 +879,7 @@ namespace Sps.Pos.Api.Controllers
 					Timeout = 20000
 				};
 
-				using (var message = new MailMessage(fromAddress, new MailAddress(user.Email, user.FullName))
+				using (var message = new MailMessage(fromAddress, new MailAddress(user.Email, user.LastName))
 				{
 					Subject = "Password Reset Kitchen-world",
 					SubjectEncoding = Encoding.UTF8,

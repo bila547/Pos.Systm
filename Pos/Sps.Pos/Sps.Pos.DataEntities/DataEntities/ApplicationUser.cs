@@ -17,23 +17,19 @@ namespace Sps.Pos.DataEntities.DataEntities
 		[Column(TypeName = "Varchar(150)")]
 		public string FirstName { get; set; }
 
-		[MaxLength(100)]
-		[Column(TypeName = "Varchar(100)")]
-		public string MiddleName { get; set; }
-
 		[Required]
 		[MaxLength(150)]
 		[Column(TypeName = "Varchar(150)")]
 		public string LastName { get; set; }
 
-		[NotMapped]
-		public string FullName { get { return $"{FirstName} {LastName}"; } }
+		//[NotMapped]
+		//public string FullName { get { return $"{FirstName} {LastName}"; } }
 
 		public DateTime? DateOfBirth { get; set; }
 
 		[Column(TypeName = "Varchar(20)")]
 		[StringLength(maximumLength: 20, MinimumLength = 10)]
-		public string MobileNumber { get; set; }
+		public string? MobileNumber { get; set; }
 
 		public bool IsDeleted { get; set; }
 
@@ -49,11 +45,11 @@ namespace Sps.Pos.DataEntities.DataEntities
 
 		public virtual ICollection<PasswordHistory> PasswordHistoryList { get; set; }
 
-		public string CreatedById { get; set; }
+		public string? CreatedById { get; set; }
 
 		public DateTime? CreatedDate { get; set; }
 
-		public string ModifiedById { get; set; }
+		public string? ModifiedById { get; set; }
 
 		public DateTime? ModifiedDate { get; set; }
 	}

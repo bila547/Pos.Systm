@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NToastNotify;
 
 namespace Sps.Pos.Mvc.Core
 {
@@ -6,17 +7,18 @@ namespace Sps.Pos.Mvc.Core
 	{
 		protected readonly ILogger<T> _logger;
 		protected readonly IApiClient _apiClient;
-		//protected readonly IToastNotification _toastService;
+		protected readonly IToastNotification _toastService;
 
 		public MvcControllerBase(
 			ILogger<T> logger,
-			IApiClient apiClient)
-			//IToastNotification toastService)
+			IApiClient apiClient,
+			IToastNotification toastService)
 		{
 			_logger = logger ?? throw new ArgumentNullException(nameof(logger));
 			_apiClient = apiClient ?? throw new ArgumentNullException(nameof(apiClient));
-			//_toastService = toastService ?? throw new ArgumentNullException(nameof(toastService));
+			_toastService = toastService ?? throw new ArgumentNullException(nameof(toastService));
 		}
+	
 
 		//protected List<SelectListItem> GetGenderList()
 		//{

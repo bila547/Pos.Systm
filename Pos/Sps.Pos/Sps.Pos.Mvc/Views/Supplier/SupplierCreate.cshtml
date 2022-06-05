@@ -1,0 +1,94 @@
+﻿@model Sps.Pos.Mvc.ViewModel.SupplierViewModel
+@{
+	ViewData["Title"] = "Supplier Create";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Supplier Create</h1>
+<br />
+<br />
+<form asp-controller="Supplier" asp-action="SupplierCreate" enctype="multipart/form-data" id="register-form" method="post">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<div class="card">
+		<div class="card-header">
+		</div>
+		<div class="card-body">
+			<div class="register-logo" style="text-align:left;">
+				<div class="col-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="SupplierCode" class="control-label"></label>
+						<input asp-for="SupplierCode" class="form-control" placeholder="@Html.DisplayNameFor(m => m.SupplierCode)" />
+						<span asp-validation-for="SupplierCode" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="SupplierName" class="control-label"></label>
+						<input asp-for="SupplierName" class="form-control" placeholder="@Html.DisplayNameFor(m => m.SupplierName)" />
+						<span asp-validation-for="SupplierName" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="PhoneNo" class="control-label"></label>
+						<input asp-for="PhoneNo" class="form-control" placeholder="@Html.DisplayNameFor(m => m.PhoneNo)" />
+						<span asp-validation-for="PhoneNo" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="FaxNo" class="control-label"></label>
+						<input asp-for="FaxNo" class="form-control" placeholder="@Html.DisplayNameFor(m => m.FaxNo)" />
+						<span asp-validation-for="FaxNo" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="MobileNo" class="control-label"></label>
+						<input asp-for="MobileNo" class="form-control" placeholder="@Html.DisplayNameFor(m => m.MobileNo)" />
+						<span asp-validation-for="MobileNo" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="City" class="control-label"></label>
+						<input asp-for="City" class="form-control" placeholder="@Html.DisplayNameFor(m => m.City)" />
+						<span asp-validation-for="City" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="Country" class="control-label"></label>
+						<input asp-for="Country" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Country)" />
+						<span asp-validation-for="Country" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="card">
+		<div class="card-footer">
+			<div class="row">
+				<div class="col-sm-12 text-right">
+					<a asp-action="Area" asp-controller="Area" class="btn btn-warning text-right">
+						<i class="glyphicon glyphicon-chevron-left"></i>&nbsp;Back to List
+					</a>
+					<button type="submit" class="btn btn-success btn-flat">
+						<i class="fa fa-plus-circle"></i>&nbsp; &nbsp; Create
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+@section Scripts
+{
+<partial name="_ValidationScriptsPartial" />
+}
+
