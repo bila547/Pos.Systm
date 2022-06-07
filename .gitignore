@@ -11,3 +11,8 @@
 /Pos/Sps.Pos/Sps.Pos.Infrastructure/obj
 /Pos/Sps.Pos/Sps.Pos.Mvc/bin/Debug/net6.0
 /Pos/Sps.Pos/Sps.Pos.Mvc/obj
+/Pos/Sps.Pos/Sps.Pos/Sps.Pos.Api/bin/Debug/net6.0/runtimes/win-x86/native
+/Pos/Sps.Pos/Sps.Pos/Sps.Pos.Api/bin/Debug/net6.0/runtimes/unix/lib
+/Pos/Sps.Pos/Sps.Pos/Sps.Pos.Api/bin/Debug/net6.0/runtimes/win/lib
+/Pos/Sps.Pos/Sps.Pos/Sps.Pos.Api/bin/Debug/net6.0/runtimes/win-arm/native
+/Pos/Sps.Pos/Sps.Pos/Sps.Pos.Api/bin/Debug/net6.0/runtimes/win-arm64/native

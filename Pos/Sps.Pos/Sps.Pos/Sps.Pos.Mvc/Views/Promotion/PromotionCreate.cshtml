@@ -1,0 +1,114 @@
+﻿@model Sps.Pos.Mvc.ViewModel.PromotionViewModel
+@{
+	ViewData["Title"] = "Promotion Create";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Promotion Create</h1>
+<br />
+<br />
+<form asp-controller="Promotion" asp-action="PromotionCreate" enctype="multipart/form-data" id="register-form" method="post">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<div class="card">
+		<div class="card-header">
+		</div>
+		<div class="card-body">
+			<div class="register-logo" style="text-align:left;">
+				<div class="col-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="PromotionName" class="control-label"></label>
+						<input asp-for="PromotionName" class="form-control" placeholder="@Html.DisplayNameFor(m => m.PromotionName)" />
+						<span asp-validation-for="PromotionName" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="PromotionCode" class="control-label"></label>
+						<input asp-for="PromotionCode" class="form-control" placeholder="@Html.DisplayNameFor(m => m.PromotionCode)" />
+						<span asp-validation-for="PromotionCode" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label>Enable:</label>
+						<select asp-for="Enable" type="text" class="form-control required" placeholder="@Html.DisplayNameFor(m => m.Enable)" tabindex="1">
+							<option value="Yes">Yes</option>
+							<option value="No">No</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="FromDate" class="control-label"></label>
+						<input asp-for="FromDate" class="form-control" placeholder="@Html.DisplayNameFor(m => m.FromDate)" />
+						<span asp-validation-for="FromDate" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="ToDate" class="control-label"></label>
+						<input asp-for="ToDate" class="form-control" placeholder="@Html.DisplayNameFor(m => m.ToDate)" />
+						<span asp-validation-for="ToDate" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="Priority" class="control-label"></label>
+						<input asp-for="Priority" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Priority)" />
+						<span asp-validation-for="Priority" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label>Discount Type:</label>
+						<select asp-for="DiscountType" type="text" class="form-control required" placeholder="@Html.DisplayNameFor(m => m.DiscountType)" tabindex="1">
+							<option value="Default">Default</option>
+							<option value="No">No</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="DiscountPkr" class="control-label"></label>
+						<input asp-for="DiscountPkr" class="form-control" placeholder="@Html.DisplayNameFor(m => m.DiscountPkr)" />
+						<span asp-validation-for="DiscountPkr" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label>Applicable On:</label>
+						<select asp-for="ApplicableOn" type="text" class="form-control required" placeholder="@Html.DisplayNameFor(m => m.ApplicableOn)" tabindex="1">
+							<option value="All Orders">All Orders</option>
+							<option value="Only one">Only One</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="card">
+		<div class="card-footer">
+			<div class="row">
+				<div class="col-sm-12 text-right">
+					<a asp-action="Promotions" asp-controller="Promotion" class="btn btn-warning text-right">
+						<i class="glyphicon glyphicon-chevron-left"></i>&nbsp;Back to List
+					</a>
+					<button type="submit" class="btn btn-success btn-flat">
+						<i class="fa fa-plus-circle"></i>&nbsp; &nbsp; Create
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+@section Scripts
+{
+<partial name="_ValidationScriptsPartial" />
+}
+

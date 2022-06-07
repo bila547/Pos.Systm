@@ -1,0 +1,12 @@
+E:\Office Work\Pos\Sps.Pos\Sps.Pos.Dto\bin\Debug\net6.0\Sps.Pos.Dto.deps.json
+E:\Office Work\Pos\Sps.Pos\Sps.Pos.Dto\bin\Debug\net6.0\Sps.Pos.Dto.dll
+E:\Office Work\Pos\Sps.Pos\Sps.Pos.Dto\bin\Debug\net6.0\Sps.Pos.Dto.pdb
+E:\Office Work\Pos\Sps.Pos\Sps.Pos.Dto\obj\Debug\net6.0\Sps.Pos.Dto.csproj.AssemblyReference.cache
+E:\Office Work\Pos\Sps.Pos\Sps.Pos.Dto\obj\Debug\net6.0\Sps.Pos.Dto.GeneratedMSBuildEditorConfig.editorconfig
+E:\Office Work\Pos\Sps.Pos\Sps.Pos.Dto\obj\Debug\net6.0\Sps.Pos.Dto.AssemblyInfoInputs.cache
+E:\Office Work\Pos\Sps.Pos\Sps.Pos.Dto\obj\Debug\net6.0\Sps.Pos.Dto.AssemblyInfo.cs
+E:\Office Work\Pos\Sps.Pos\Sps.Pos.Dto\obj\Debug\net6.0\Sps.Pos.Dto.csproj.CoreCompileInputs.cache
+E:\Office Work\Pos\Sps.Pos\Sps.Pos.Dto\obj\Debug\net6.0\Sps.Pos.Dto.dll
+E:\Office Work\Pos\Sps.Pos\Sps.Pos.Dto\obj\Debug\net6.0\refint\Sps.Pos.Dto.dll
+E:\Office Work\Pos\Sps.Pos\Sps.Pos.Dto\obj\Debug\net6.0\Sps.Pos.Dto.pdb
+E:\Office Work\Pos\Sps.Pos\Sps.Pos.Dto\obj\Debug\net6.0\ref\Sps.Pos.Dto.dll

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uRqkzAF44xueHLFL4t8a0jiQgLJlggEE3Kq7MGWbMYxFRnpMdt0azaYtOnykEw+KGnMD2pmU6Oyqh0b8ZrahZw==",
+  "success": true,
+  "projectFilePath": "E:\\Office Work\\Pos\\Sps.Pos\\Sps.Pos.Infrastructure\\Sps.Pos.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Toxic\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
