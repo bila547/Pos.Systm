@@ -1,0 +1,59 @@
+﻿@model Sps.Pos.Mvc.ViewModel.ShiftViewModel
+@{
+	ViewData["Title"] = "Shift Edit";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Shift Edit</h1>
+
+<br />
+<br />
+<form asp-controller="Shift" asp-action="ShiftEdit" enctype="multipart/form-data" id="register-form" method="post">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<input asp-for="Id" type="hidden" />
+	<div class="card">
+		<div class="card-header">
+		</div>
+		<div class="card-body">
+			<div class="register-logo" style="text-align:left;">
+				<div class="col-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="ShiftCode" class="control-label"></label>
+						<input asp-for="ShiftCode" class="form-control" placeholder="@Html.DisplayNameFor(m => m.ShiftCode)" />
+						<span asp-validation-for="ShiftCode" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="ShiftName" class="control-label"></label>
+						<input asp-for="ShiftName" class="form-control" placeholder="@Html.DisplayNameFor(m => m.ShiftName)" />
+						<span asp-validation-for="ShiftName" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-footer">
+			<div class="row">
+				<div class="col-sm-12 text-right">
+					<a asp-action="Shifts" asp-controller="Shift" class="btn btn-warning text-right">
+						<i class="glyphicon glyphicon-chevron-left"></i>&nbsp;Back to List
+					</a>
+					<button type="submit" class="btn btn-success btn-flat">
+						<i class="fa fa-floppy-o"></i>&nbsp; &nbsp; Update
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+@section Scripts
+{
+<partial name="_ValidationScriptsPartial" />
+}

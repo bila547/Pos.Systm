@@ -1,0 +1,57 @@
+﻿@model Sps.Pos.Mvc.ViewModel.TaxViewModel
+@{
+	ViewData["Title"] = "Tax Create";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Tax Create</h1>
+<br />
+<br />
+<form asp-controller="Tax" asp-action="TaxCreate" enctype="multipart/form-data" id="register-form" method="post">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<div class="card">
+		<div class="card-header">
+		</div>
+		<div class="card-body">
+			<div class="register-logo" style="text-align:left;">
+				<div class="col-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="TaxName" class="control-label"></label>
+						<input asp-for="TaxName" class="form-control" placeholder="@Html.DisplayNameFor(m => m.TaxName)" />
+						<span asp-validation-for="TaxName" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="TaxPercentage" class="control-label"></label>
+						<input asp-for="TaxPercentage" class="form-control" placeholder="@Html.DisplayNameFor(m => m.TaxPercentage)" />
+						<span asp-validation-for="TaxPercentage" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-footer">
+			<div class="row">
+				<div class="col-sm-12 text-right">
+					<a asp-action="Taxes" asp-controller="Tax" class="btn btn-warning text-right">
+						<i class="glyphicon glyphicon-chevron-left"></i>&nbsp;Back to List
+					</a>
+					<button type="submit" class="btn btn-success btn-flat">
+						<i class="fa fa-plus-circle"></i>&nbsp; &nbsp; Create
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+@section Scripts
+{
+<partial name="_ValidationScriptsPartial" />
+}

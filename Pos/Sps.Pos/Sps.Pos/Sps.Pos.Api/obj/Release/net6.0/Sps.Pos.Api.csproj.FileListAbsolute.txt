@@ -1,7 +1,0 @@
-E:\Office Work\Pos\Sps.Pos\Sps.Pos.Api\obj\Release\net6.0\Sps.Pos.Api.csproj.AssemblyReference.cache
-E:\Office Work\Pos\Sps.Pos\Sps.Pos.Api\obj\Release\net6.0\Sps.Pos.Api.GeneratedMSBuildEditorConfig.editorconfig
-E:\Office Work\Pos\Sps.Pos\Sps.Pos.Api\obj\Release\net6.0\Sps.Pos.Api.AssemblyInfoInputs.cache
-E:\Office Work\Pos\Sps.Pos\Sps.Pos.Api\obj\Release\net6.0\Sps.Pos.Api.AssemblyInfo.cs
-E:\Office Work\Pos\Sps.Pos\Sps.Pos.Api\obj\Release\net6.0\Sps.Pos.Api.csproj.CoreCompileInputs.cache
-E:\Office Work\Pos\Sps.Pos\Sps.Pos.Api\obj\Release\net6.0\Sps.Pos.Api.MvcApplicationPartsAssemblyInfo.cs
-E:\Office Work\Pos\Sps.Pos\Sps.Pos.Api\obj\Release\net6.0\Sps.Pos.Api.MvcApplicationPartsAssemblyInfo.cache

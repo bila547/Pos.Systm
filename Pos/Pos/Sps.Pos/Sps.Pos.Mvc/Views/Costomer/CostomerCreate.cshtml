@@ -1,0 +1,109 @@
+﻿@model Sps.Pos.Mvc.ViewModel.CostomerViewModel
+@{
+	ViewData["Title"] = "Customer Create";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3> Customer Details</h3>
+<br />
+<br />
+<form asp-controller="Costomer" asp-action="CostomerCreate" enctype="multipart/form-data" id="register-form" method="post">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<div class="card">
+		<div class="card-header">
+		</div>
+		<div class="card-body">
+			<div class="register-logo" style="text-align:left;">
+				<div class="col-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="CostomerName" class="control-label"></label>
+						<input asp-for="CostomerName" class="form-control" placeholder="@Html.DisplayNameFor(m => m.CostomerName)" />
+						<span asp-validation-for="CostomerName" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="AreaId" class="control-label"></label><span class="text-danger">*</span>
+						<select asp-for="AreaId" asp-items="@Model.AreaList" class="form-control">
+							<option value="">--Select Area--</option>
+						</select>
+						<span asp-validation-for="AreaId" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="CostomerAddress" class="control-label"></label>
+						<textarea asp-for="CostomerAddress" class="form-control" placeholder="@Html.DisplayNameFor(m => m.CostomerAddress)"></textarea>
+						<span asp-validation-for="CostomerAddress" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="CostomerPhone" class="control-label"></label>
+						<input asp-for="CostomerPhone" class="form-control" placeholder="@Html.DisplayNameFor(m => m.CostomerPhone)">
+						<span asp-validation-for="CostomerPhone" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="CostomerFax" class="control-label"></label>
+						<input asp-for="CostomerFax" class="form-control" placeholder="@Html.DisplayNameFor(m => m.CostomerFax)">
+						<span asp-validation-for="CostomerFax" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="CostomerMobile" class="control-label"></label>
+						<input asp-for="CostomerMobile" class="form-control" placeholder="@Html.DisplayNameFor(m => m.CostomerMobile)" />
+						<span asp-validation-for="CostomerMobile" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="CostomerEmail" class="control-label"></label>
+						<input asp-for="CostomerEmail" class="form-control" placeholder="@Html.DisplayNameFor(m => m.CostomerEmail)" />
+						<span asp-validation-for="CostomerEmail" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label asp-for="DateOfBirthDay" class="control-label"></label>
+						<input asp-for="DateOfBirthDay" class="form-control" placeholder="@Html.DisplayNameFor(m => m.DateOfBirthDay)" />
+						<span asp-validation-for="DateOfBirthDay" class="text-danger"></span>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="form-group checkbox">
+						<input asp-for="IsCreditCostomer" class="form-check-input" />
+						<label asp-for="IsCreditCostomer" class="control-label"></label>
+						<span asp-validation-for="IsCreditCostomer" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-footer">
+			<div class="row">
+				<div class="col-sm-12 text-right">
+					<a asp-action="Costomers" asp-controller="Costomer" class="btn btn-warning text-right">
+						<i class="glyphicon glyphicon-chevron-left"></i>&nbsp;Back to List
+					</a>
+					<button type="submit" class="btn btn-success btn-flat">
+						<i class="fa fa-plus-circle"></i>&nbsp; &nbsp; Create
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+@section Scripts
+	{
+	<partial name="_ValidationScriptsPartial" />
+}
